@@ -1,0 +1,10 @@
+
+.title{
+    display: inline-block;
+    color: aliceblue;
+    padding: 4px;
+}
+
+a{
+    text-decoration: none;
+}
