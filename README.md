@@ -1,2 +1,0 @@
-# Componentes - Desafío 1
-
