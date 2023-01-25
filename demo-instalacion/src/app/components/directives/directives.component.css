@@ -1,0 +1,11 @@
+.active{
+    color: rgb(82, 82, 255);
+}
+
+.inactive{
+    color: rgb(75, 75, 75);
+}
+
+h2{
+    padding-top: 5px;
+}

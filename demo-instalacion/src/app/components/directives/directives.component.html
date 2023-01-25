@@ -1,0 +1,24 @@
+<h1 appCustomDirective>Interpolación y Directivas</h1>
+
+<h2 appCustomDirective>Alumnos Activos</h2>
+<ul>
+    <li *ngFor="let student of studentList" [ngClass]="student.isActive ? 'active' : 'inactive'">
+        {{student.name}} {{student.surname}}
+    </li>
+</ul>
+
+<h2 appCustomDirective>Desempeño de los Alumnos</h2>
+<div *ngFor="let student of studentList">
+    <div appReprobadoDirective *ngIf="student.grade < 60">{{student.name}} reprobó</div>
+    <div appAprobadoDirective *ngIf="student.grade >= 60 && student.grade < 80">{{student.name}} aprobó</div>
+    <div appPromocionadoDirective *ngIf="student.grade >= 80">{{student.name}} promocionó</div>
+</div>
+
+<h2 appCustomDirective>Curso al que Asiste el Alumno {{selectedStudent.name}}</h2>
+<div [ngSwitch]="selectedStudent.course">
+    <div *ngSwitchCase="'A'">{{selectedStudent.name}} asiste al curso avanzado</div>
+    <div *ngSwitchCase="'B'">{{selectedStudent.name}} asiste al curso intermedio</div>
+    <div *ngSwitchCase="'C'">{{selectedStudent.name}} asiste al curso básico</div>
+    <div *ngSwitchDefault>No existe el curso</div>
+</div>
+
